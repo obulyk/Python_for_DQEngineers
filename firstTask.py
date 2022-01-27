@@ -63,7 +63,7 @@ for numb in evenNumbers:
     countEvenNumbers += 1
 # print the result
 try:
-    print(sumaEvenNumbers / countEvenNumbers)
+    print((sumaEvenNumbers / countEvenNumbers).__round__())
 except:
     print("Nothing to display")
 # sum counter for Odd number is set to 0
@@ -77,6 +77,6 @@ for n in oddNumbers:
     countOddNumber += 1
 # print the result
 try:
-    print(sumaOddNumber / countOddNumber)
+    print((sumaOddNumber / countOddNumber).__round__())
 except:
     print("Nothing to display")
