@@ -35,7 +35,7 @@ print(Str)
 for words in textLower.split():
     editedText = re.sub(r'\biz\b', 'is', textLower)
 print(editedText)
-
+# I don't know why it is counting not correctly. Need help
 whiteSpaces = re.findall(r'\s', t)
 print(whiteSpaces.__len__())
 
