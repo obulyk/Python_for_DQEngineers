@@ -29,5 +29,5 @@ for sub in l:
         res.get(key)
 # printing result
 print(dict(res))
-
+# Now I don't know how to make 'c_2': 78 {'a_1': 5, 'b': 7, 'c': 35, 'g_2': 42}
 
