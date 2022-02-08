@@ -11,8 +11,8 @@ for i in range(randomNumberOfList):
     tple = {random.choice(string.ascii_lowercase): random.randint(0, 100),
             random.choice(string.ascii_lowercase): random.randint(0, 100),
             random.choice(string.ascii_lowercase): random.randint(0, 100)}
-# add each created dict into list
-    l.append(tple)
+    if len(tple) < 3: pass
+    else: l.append(tple)
 print(l)
 # maybe I will need that list in a future
 commonDictionary = {}
