@@ -11,9 +11,8 @@ for i in range(randomNumberOfList):
     tple = {random.choice(string.ascii_lowercase): random.randint(0, 100),
             random.choice(string.ascii_lowercase): random.randint(0, 100),
             random.choice(string.ascii_lowercase): random.randint(0, 100)}
-    if len(tple) < 3: pass
-    else: l.append(tple)
-print(l)
+# add each created dict into list
+    l.append(tple)
 # maybe I will need that list in a future
 commonDictionary = {}
 
@@ -29,5 +28,12 @@ for sub in l:
         res.get(key)
 # printing result
 print(dict(res))
-# Now I don't know how to make 'c_2': 78 {'a_1': 5, 'b': 7, 'c': 35, 'g_2': 42}
+for key, value in res.items():
+    if len(value) > 1:
+        commonDictionary.update({key + str('_') + str(value.index(max(value)) + 1): max(value)})
+    else:
+        commonDictionary.update({key: max(value)})
+
+# common dict output
+print('Common dictionary:', commonDictionary)
 
