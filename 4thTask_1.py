@@ -1,8 +1,9 @@
-l = []
+
 def randomList():
     import string
     import random
-
+    global l
+    l = []
     randomNumberOfList = random.randint(2, 10)
     for i in range(randomNumberOfList):
         tple = {random.choice(string.ascii_lowercase): random.randint(0, 100),
