@@ -17,17 +17,14 @@ t = """homEwork:
 
   last iz TO calculate nuMber OF Whitespace characteRS in this Tex. caREFULL, not only Spaces, but ALL whitespaces. I got 87."""
 
-# t.replace('{}', '')
 countWhiteSpaces = 0
 global stringSentence
-global text
 
 def letterLowerCases(t):
     global textLower
-    textLower = t.lower()
-    text = textLower.replace('{}', '')
-    return text
-
+    textLower = t.lower().replace('{}', '')
+    return textLower
+print(letterLowerCases(t))
 def lastWordsSentence(t):
     letterLowerCases(t)
     import re
@@ -39,16 +36,18 @@ def lastWordsSentence(t):
         sentence = stringSentence.lower().replace('.', '')
     oneStr = textLower.format(sentence)
     return oneStr
+print(lastWordsSentence(t))
 
-def missSpellingFixedText(t):
-    words = ""
-    for words in t.split():
-        editedText = re.sub(r'\biz\b', 'is', t)
-    return print(editedText)
+def missSpellingFixedText(func):
+    letterLowerCases(t)
+    for words in textLower:
+        ch_text = re.sub(r'\biz\b', 'is', textLower)
+    return (ch_text.replace('{}', ''))
+print (missSpellingFixedText(t))
 
 def findAllWhiteSpaces(t):
+    print(missSpellingFixedText(t))
+    t.lower()
     whiteSpaces = re.findall(r'\s', t)
     return print(whiteSpaces.__len__())
 findAllWhiteSpaces(t)
-
-
