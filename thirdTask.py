@@ -1,10 +1,6 @@
 import re
 
-countWhiteSpaces = 0
-stringSentence = ""
-sentence = ""
-word = ""
-replacedText = ""
+global t
 t = """homEwork:
 
   tHis iz your homeWork, copy these Text to variable.
@@ -21,21 +17,41 @@ t = """homEwork:
 
   last iz TO calculate nuMber OF Whitespace characteRS in this Tex. caREFULL, not only Spaces, but ALL whitespaces. I got 87."""
 
-# text = t.replace('\n', ' ')
-textLower = t.lower()
-textLower.replace('{}', '')
+countWhiteSpaces = 0
+global stringSentence
 
-wordsWithDots = re.findall(r'\w+\.', textLower)
-for ele in wordsWithDots:
-    stringSentence += ele + ' '
-    sentence = stringSentence.lower().replace('.', '')
-Str = textLower.format(sentence)
-print(Str)
+def letterLowerCases(t):
+    global textLower
+    textLower = t.lower().replace('{}', '')
+    # for i in textLower:
+    #     if textLower[i]. ==".":print ("wwwww")
+    return textLower
+print(letterLowerCases(t))
+def lastWordsSentence(t):
+    letterLowerCases(t)
+    import re
+    sentence = ""
+    stringSentence = ""
+    wordsWithDots = re.findall(r'\w+\.', textLower)
+    for ele in wordsWithDots:
+        stringSentence += ele + ' '
+        sentence = stringSentence.lower().replace('.', '')
+    oneStr = textLower.format(sentence)
+    return oneStr
+#print(lastWordsSentence(t))
 
-for words in textLower.split():
-    editedText = re.sub(r'\biz\b', 'is', textLower)
-print(editedText)
-# I don't know why it is counting not correctly. Need help
-whiteSpaces = re.findall(r'\s', t)
-print(whiteSpaces.__len__())
+def missSpellingFixedText(func):
+    letterLowerCases(t)
+    for word in textLower:
+        ch_text = re.sub(r'\biz\b', 'is', textLower)
+    return (ch_text.replace('{}', ''))
+#print (missSpellingFixedText(t))
+
+def findAllWhiteSpaces(t):
+    print(missSpellingFixedText(t))
+    t.lower()
+    whiteSpaces = re.findall(r'\s', t)
+    return print(whiteSpaces.__len__())
+#findAllWhiteSpaces(t)
+
 
