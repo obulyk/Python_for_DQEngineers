@@ -51,3 +51,46 @@ homEwork:
   Refactor homeworks from module 2 and 3 using functional approach with decomposition.
   
   Lesson 5
+  
+  Create a tool, which will do user generated news feed:
+
+  1.User select what data type he wants to add  
+  2.Provide record type required data
+  3.Record is published on text file in special format
+
+  Lesson 6
+  Expand previous Homework 5 with additional class, which allow to provide records by text file:
+
+  1.Define your input format (one or many records)
+  2.Default folder or user provided file path
+  
+  Lesson 7
+  Calculate number of words and letters from previous Homeworks 5/6 output test file.
+
+  Create two csv:
+
+  1.word-count (all words are preprocessed in lowercase)
+  2.letter, cout_all, count_uppercase, percentage (add header, spacecharacters are not included)
+
+  CSVs should be recreated each time new record added.
+  
+  Lesson 8
+  Expand previous Homework 5/6/7 with additional class, which allow to provide records by JSON file:
+
+  1.Define your input format (one or many records)
+  2.Default folder or user provided file path
+  3.Remove file if it was successfully processed
+  
+  Lesson 9
+  Expand previous Homework 5/6/7/8 with additional class, which allow to provide records by XML file:
+
+  1.Define your input format (one or many records)
+  2.Default folder or user provided file path
+  3.Remove file if it was successfully processed
+  
+  Lesson 10
+  Expand previous Homework 5/6/7/8/9 with additional class, which allow to save records into database:
+
+  1.Different types of records require different data tables
+  2.New record creates new row in data table
+  3.Implement “no duplicate” check.
