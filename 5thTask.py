@@ -19,7 +19,6 @@ def selectTypeNews():
     elif mode == 2: print("ads")
     elif mode == 3: print("unique publish rules")
 class News():
-    self:
     selectTypeNews()
 
 class Ads():
